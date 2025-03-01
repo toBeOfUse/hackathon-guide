@@ -6,35 +6,23 @@ All you need is an idea and the tools to implement it. For example:
 
 ## Previous Projects
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
+import { CarouselTransformer } from '@/components/transformers.tsx';
 
-{
-<Carousel className="w-full max-w-xs mx-auto">
-    <CarouselContent>
-    {Array.from({ length: 5 }).map((_, index) => (
-        <CarouselItem key={index}>
-        <div className="p-1">
-            <Card>
-            <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight my-2">Escape Pursuit</h3>
-                <p>HackPSU Spring 2024</p>
-            </CardContent>
-            </Card>
-        </div>
-        </CarouselItem>
-    ))}
-    </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
-</Carousel>
-}
+<CarouselTransformer>
+
+### Project 1
+
+Description.
+
+Description!
+
+### Project 2
+
+Description~
+
+Description...
+
+</CarouselTransformer>
 
 ### Key takeaways for success:
 
@@ -48,19 +36,13 @@ For more on those last two points, read on:
 ## Technologies
 
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+    AccordionTransformer
+} from "@/components/transformers"
 
-{
-<Accordion type="single" collapsible className="w-full">
-    <AccordionItem value="item-1">
-    <AccordionTrigger>Web Development</AccordionTrigger>
-    <AccordionContent>
-        Just use Flask.
-    </AccordionContent>
-    </AccordionItem>
-</Accordion>
-}
+<AccordionTransformer>
+
+### Web dev
+
+Just use Flask :D
+
+</AccordionTransformer>
