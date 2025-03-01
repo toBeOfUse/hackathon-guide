@@ -13,10 +13,11 @@ import {
 import { Children, ReactNode } from "react";
 
 /**
- * Matches HTML header elements, like <h1>, <h2>, <h3>...
+ * Matches the <h3> header, which is what I'm using to define meaningful
+ * headings within transformed blocks
  */
 const reactChildIsHeader = (c: ReactNode) =>
-  !!c && typeof c === "object" && "type" in c && c.type.toString().match(/h\d/i);
+  !!c && typeof c === "object" && "type" in c && c.type.toString() === "h3";
 
 /**
  * This component takes some HTML elements, like the ones that the Markdown in
