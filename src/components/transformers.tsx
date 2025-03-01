@@ -96,9 +96,9 @@ export function CarouselTransformer({ children }: { children: ReactNode }) {
       <CarouselContent>
         {cards.map(({ header, content }, index) => (
           <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
+            <div className="p-1 h-full">
+              <Card className="h-full">
+                <CardContent className="flex flex-col aspect-square items-center justify-center p-6 h-full">
                   {header}
                   {content}
                 </CardContent>
