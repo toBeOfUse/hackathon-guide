@@ -71,7 +71,7 @@ export function CarouselTransformer({ children }: { children: ReactNode }) {
   }
 
   return (
-    <Carousel className="w-full max-w-md mx-auto">
+    <Carousel className="w-full sm:max-w-md md:max-w-lg mx-auto">
       <CarouselContent>
         {cards.map(({ header, content }, index) => (
           <CarouselItem key={index}>

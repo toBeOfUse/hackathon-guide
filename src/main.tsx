@@ -6,7 +6,7 @@ import "@/index.css";
 
 const app = (
   <React.StrictMode>
-    <div className="max-w-prose mx-auto">
+    <div className="max-w-[800px] mx-auto">
       <Guide />
     </div>
   </React.StrictMode>
