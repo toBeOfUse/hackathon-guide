@@ -40,5 +40,6 @@
     "vite": "^5.4.14",
     "vite-react-ssg": "^0.8.5",
     "vite-tsconfig-paths": "^4.3.2"
-  }
+  },
+  "packageManager": "pnpm@10.5.2+sha256.79a98daa90248b50815e31460790f118c56fe099113370826caa0153be6daba5"
 }

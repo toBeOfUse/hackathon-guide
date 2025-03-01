@@ -7,6 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import rehypeTailwind from "./plugins/rehype-tailwind";
 
 export default defineConfig({
+  base: "/hackathon-guide/",
   plugins: [
     { enforce: "pre", ...mdx({ rehypePlugins: [rehypeTailwind] }) },
     react(),
