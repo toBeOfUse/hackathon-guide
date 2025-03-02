@@ -1,6 +1,6 @@
 # A Quickstart Guide to Hackathons
 
-Throwing together a revolutionary technical project that **shakes the world to its core** and ***permanently changes humans' relationship with technology*** in 24 - 48 hours might sound hard, but **it's really not**.
+Throwing together a *revolutionary* technical project that **shakes the world to its core** and ***permanently changes humans' relationship with technology*** in 24 - 48 hours might sound hard, but **it's really not**.
 
 All you need is an idea and the tools to implement it. For example: 
 
@@ -35,7 +35,7 @@ This is a simple enhancement to an age-old pastime that shows how technology can
 
 This was a Python program that read PDFs and, with the help of a language model, created PowerPoint slides that summarized their contents.
 
-These days, everyone knows AI can do this kind of thing, but back in October 2022, before ChatGPT, this **blew people's minds**. This project found an application of technology that people weren't used to yet. 
+These days, everyone knows AI can do this kind of thing, but back in October 2022, before ChatGPT, this *blew people's minds*. This project found an application of technology that people weren't used to yet. 
 
 <PopoverTransformer>
 
@@ -48,7 +48,7 @@ These days, everyone knows AI can do this kind of thing, but back in October 202
 
 </PopoverTransformer>
 
-### [Single-Handed Typing (KHE 2022)](https://devpost.com/software/singlehanded-typing-tech)
+### [Single-Handed Typing](https://devpost.com/software/singlehanded-typing-tech)
 
 ##### KHE 2022
 
@@ -60,13 +60,13 @@ This project wasn't completely original, but it did iterate on a forgotten conce
 
 ##### Technologies Used
 
-- keyboard, a Python library that can detect and modify keyboard input
+- `keyboard`, a Python library that can detect and modify keyboard input
 - PyQt, a Python library used to display stuff in a window
 - Vue and Nuxt to create the website that demoed the project
 
 </PopoverTransformer>
 
-### [FaunaFinder (MakeUC 2023)](https://devpost.com/software/faunafinder-ai-powered-animal-breed-recognition)
+### [FaunaFinder](https://devpost.com/software/faunafinder-ai-powered-animal-breed-recognition)
 
 ##### MakeUC 2023
 
@@ -84,7 +84,7 @@ There is still a lot of untapped potential within the world of AI, probably, and
 
 </PopoverTransformer>
 
-### [Subway Cheese Chase (MakeUC 2023)](https://devpost.com/software/subway-cheese-chase)
+{/* ### [Subway Cheese Chase](https://devpost.com/software/subway-cheese-chase)
 
 ##### MakeUC 2023
 
@@ -99,15 +99,15 @@ Not every hackathon project has to be super serious!
 - Godot, a popular free game engine
 - Blender, a program for creating 3D art
 
-</PopoverTransformer>
+</PopoverTransformer> */}
 
-### [CWRU Full-Text Class Search (KHE 2019)](https://devpost.com/software/cwru-full-text-class-search)
+### [CWRU Full-Text Class Search](https://devpost.com/software/cwru-full-text-class-search)
 
 ##### KHE 2019
 
 This was a project developed by students from Case Western Reserve University who disapproved of their university's portal for class searches. So, they scraped the content of the portal and made their own website out of it.
 
-This project **identified a part of our built environment that sucks** and **decided to try to fix it**.
+This project *identified a way in which the world sucks* and took it upon itself to try to *fix* it.
 
 <PopoverTransformer>
 
@@ -120,7 +120,7 @@ This project **identified a part of our built environment that sucks** and **dec
 
 </PopoverTransformer>
 
-### [Safe-Roads (MakeUC 2023)](https://devpost.com/software/safe-roads)
+### [Safe-Roads](https://devpost.com/software/safe-roads)
 
 ##### MakeUC 2023
 
@@ -153,13 +153,167 @@ For more on those last two points, read on:
 ## Technologies
 
 import {
-    AccordionTransformer
+  AccordionTransformer
 } from "@/components/transformers"
 
 <AccordionTransformer>
 
-### Web dev
+### Web Development
 
-Just use Flask :D
+This is the most common way to create apps, with a server application taking care of computation and data storage and familiar UI manifesting in a browser. 
+
+---
+
+<p className='text-center mb-6'>**Inspiration Source**: The [val.town showcase](https://www.val.town/explore/community-showcase) • **Study Spot**: The [MDN Developer Guides](https://developer.mozilla.org/en-US/docs/MDN/Guides)</p>
+
+<img alt="A retro graphic of a rotating globe." src="www.gif" class="mx-auto max-w-full" />
+
+The web technologies that were originally developed for the creation of Geocities pages and mailing list address forms eventually broke containment and infiltrated every single facet of the modern graphical user interface-based world.
+
+Generally, to use them, you need to create a **backend server application** that can store data, make itself available on a network, and usually do most of the actual work that the thing you're making needs to do. When a web browser (aka a **client**) connects to it, the backend server will send **client-side code** to the browser that will tell the browser what to display to the user. The server application is known as the **backend**; the client-side code is called the **frontend**.
+
+Except,
+
+#### Do you need a backend?
+
+The languages that the browser understands are HTML (for content), CSS (for styling and layout), and JavaScript (for interactivity.) Frontend code, which runs in the browser, needs to be written in or compiled to those languages. (By "compiled to," I mean that you might use e.g. Typescript instead of JavaScript, but then you're going to need a *build step* in your workflow that turns your code *into* JavaScript.)
+
+You can, in fact, write tons of different apps in pure client-side code. These are apps that don't need to use data that exist outside of one person's browser. Cool projects like [the Unsure Calculator](https://filiph.github.io/unsure/) or even the [HexEd.it Hex Editor](https://hexed.it/) work entirely in frontend code in JavaScript. You can even import libraries hosted on [npm](https://www.npmjs.com/) from a CDN like [https://esm.sh/](https://esm.sh/).
+
+This is a less popular option these days, though, since a lot of people use tools like TypeScript or React that need that aforementioned *build step* before their code can run in a browser, and that *build step* has to run in some kind of server-side application, since it definitionally can't run in the browser itself.
+
+#### You might!
+
+Furthermore, you definitely do need a backend if you need to coordinate and share data between multiple browsers, like a social media site or a chat app where posts/messages that are shared by one person need to be viewable by other people.
+
+The simplest way to get a backend is to use a site like [val.town](https://www.val.town/) for quick, easy hosting. val.town lets you write a JavaScript function that has access to some simple external storage mechanisms, and runs it in the cloud like magic whenever a user visits its URL.
+
+On the other hand, if you want to run the server application on your own computer, and you're willing to write it in JavaScript, the simplest way is to probably write it using the [Express.js] framework, running the resulting code by feeding it into Node.js. Or, since backend code doesn't need to run in the browser and can thus be written in any language, you can use the venerable framework Flask, which will help you write a server application in Python.
+
+#### Why not both?
+
+There are also "full-stack" web development frameworks that manage both the backend server-side stuff and the fancy frontend interface stuff simultaneously. The most popular of those is probably currently Next.js, which lets you write JavaScript that runs on the server and JavaScript that runs in the browser and kind of intermix them freely. This is very powerful, but it can also be extremely confusing when you can't figure out where the code you've written is even running. Other full-stack frameworks include Nuxt and Remix.
+
+#### Note
+
+- Yes, there are zillions of web development frameworks. We'll come up with one that leaves your sanity intact eventually. 
 
 </AccordionTransformer>
+
+<AccordionTransformer>
+
+### Artificial Intelligence
+
+This term typically refers to technology that can make sense out of the ambiguities involved in natural phenomenona like language or images in a probabilistic way.
+
+---
+
+<p className='text-center mb-6'>**Inspiration Source**: [Hugging Face Spaces](https://huggingface.co/spaces)</p>
+
+<img alt="A robot breakdancing, with the caption 'I was built to the destroy but right now I'm busy'" src="ai.jpg" class="mx-auto max-w-full" />
+
+Artificial intelligence is a highly technical field replete with functions with weird names like softmax and sigmoid and the promise that it'll replace us all (humans) any minute now, but the basic ideas are actually pretty approachable, and there are a lot of tools out there right now that package up the last few decades of the field's progress so you don't have to redo it.
+
+Here are a few ways to [delve](https://www.businessinsider.com/y-combinator-paul-graham-delve-ai-chatgpt-giveaway-email-pitch-2024-4) into this fertile territory, from least to most hands-on:
+
+### Using existing tools via APIs
+
+- As covered in the section above, APIs let you request data from other people's computers and use it in your own endeavors. The [OpenAI API](https://platform.openai.com/docs/introduction), which you can use to get freshly generated text or images or transcribed audio or various other things, is the basis of tons of products and projects. However, as such, it's not free.
+  - If you haven't opened an OpenAI account before, you are granted $5 of free credit for signing up, which expires after three months; $5 doesn't sound like a lot, but if you look at [OpenAI's pricing](https://openai.com/pricing), it can go a fairly long way.
+- Google offers a lot more free credit for its [AI tools](https://cloud.google.com/use-cases/free-ai-tools), including [Gemini](https://ai.google.dev/pricing), its large language model. You can use Gemini 1.0 Pro for free at a maximum rate of 15 requests per minute - that won't let you deploy a product to hundreds of thousands of users, but it can be useful for a hackathon project here and there.
+- Cohere, which has recently released a new large language model called Command R+ that has climbed the ranks on the Chatbot Arena Leaderboard, also [offers free trial access to their API](https://cohere.com/pricing).
+
+### Using existing tools through libraries
+
+- There are also many options for those ambitious enough to want to install a mechanical soul into their own actual computer. [llama.cpp](https://github.com/ggerganov/llama.cpp) is a library that lets you run a variety of large language models locally for text completion and chat, although you'll be expected to have pretty decent specs to run the high-end ones.
+- [Hugging Face](https://huggingface.co) provides a vast array of models for different use cases that involve handling text, images, and audio, most of which can be downloaded and utilized in a few lines of code using their [transformers](https://github.com/huggingface/transformers) Python library. Again, you might have to be a little bit patient to get results on an ordinary computer, but it is more exciting to see things like speech recognition happen right there in front of you.
+- Also, there exist higher-level libraries that can make use of local and non-local machine learning models, like [LangChain](https://www.ibm.com/topics/langchain), which is a popular framework for building applications around large language models using techniques like retrieval-augmented generation (RAG), where the AI is given the ability to skim through text that you provide to identify relevant information and answer your questions. (Basically.)
+
+### Training brand new models
+
+Although getting new machine learning models working takes quite a bit of ambition and patience, it is interesting to see how computers can turn data into the appearance of intelligence, and there are two whole extremely popular Python libraries to do it with.
+
+- [TensorFlow](https://github.com/tensorflow/tensorflow) has more stars on Github so I'm putting it first. It is a machine learning library created by Google and later integrated with another library called Keras that provides a high-level interface to the problem of turning e.g. a gigantic number of pictures of birds into a machine learning model that can recognize species of bird. It also provides access to [TensorFlow Hub](https://www.tensorflow.org/hub), which provides many models pre-trained for things like image recognition, which can be customized to recognize specific kinds of images, like those of birds.
+- [PyTorch](https://github.com/pytorch/pytorch) is used more by academics and is also perfectly capable of being used to create a bird recognizer. Although it seems to me like a lot of generalist usage of these libraries is centered around recognizing pictures of things, [here](https://www.youtube.com/watch?v=kCc8FmEb1nY) is a YouTube video where a former OpenAI engineer uses PyTorch to build a GPT-style LLM, which is something.
+
+Note that [Google Colab](https://colab.research.google.com/) and [Kaggle](https://www.kaggle.com/) both provide [Jupyter Notebook](https://jupyter.org/)–based Python environments that are commonly used to test out AI projects.
+
+
+</AccordionTransformer>
+
+<AccordionTransformer>
+
+### APIs
+
+What is an API? What isn't an API? Is Santa Claus my parents?
+
+---
+
+<p className='text-center mb-6'>**Inspiration Source**: [This curated list of public APIs](https://github.com/public-api-lists/public-api-lists)</p>
+
+API stands for Application Programming Interface and it is a very broad term that can refer to any agreed-upon system for enabling two computer programs or libraries to interact in a constructive way.
+
+A lot of the time, though, an API is going to turn out to be a service that provides structured data over the Internet. A classic example is the OpenWeather API. You can create an API call, and your program will get back data in some specified format like JSON or XML that informs it what the weather is, was, or is predicted to be in a certain area. It will handle a certain amount of requests for free, and then expect you to pay up for more. You can create a program that uses that data to do things like critique picnicking schedules.
+
+This is essentially a backend web server (see the section above) that responds to network requests with raw data, instead of with client-side code that creates a graphical user interface. It is often useful to use an API to interact with fancy tools that you can't build yourself, like large language models (see the section below.)
+
+Often, libraries exist that provide pre-programmed ways to request data from any given API, like this Python library that lets you get weather data with simple function calls. Keep an eye out for libraries like this, because they can be helpful. 
+
+</AccordionTransformer>
+
+<AccordionTransformer>
+
+### Apps
+
+Creating simple and useful programs that one can install on one's phone or computer is still a thing.
+
+---
+
+Native, installable apps can benefit in speed, look, and feel from being built to run on a specific kind of device. There are usually relatively straightforward recommended ways to build apps for a specific platform; there aren't a huge number of different ideas for how to deploy things crowding into the field. How you create your app depends largely on where you want it to run, so let's go through the possibilities:
+
+#### Windows
+
+Windows app, otherwise known as normal computer programs, are a thing, because a lot of people use Windows computers. If you want to create an app for Windows, you should probably use the Windows Presentation Foundation (WPF) framework. It lets you create apps using XAML, which is like HTML but for Windows, and C#. The simplest way to use WPF is to create a new project with it in [Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/).
+
+#### MacOS/iOS
+
+Apple's devices currently use the [SwiftUI](https://developer.apple.com/xcode/swiftui/) framework for creating apps, which is built around the new-ish programming language called Swift.
+
+#### Android
+
+Android apps are currently usually built in [Android Studio](https://developer.android.com/studio) using a new-ish programming language called Kotlin.
+
+#### Cross-Platform for Desktop
+
+[Qt](https://www.qt.io/) is a C++ library that is mostly used to make desktop apps for MacOS, Linux, and Windows by projects ranging from Maya to VLC Player. It also has a Python version.
+
+#### Cross-Platform for Mobile
+
+Guess what, [React Native](https://reactnative.dev/) is a popular way to create apps for phones that are not on the web but somehow still use JavaScript. God why. [Expo](https://expo.dev/) is a neat framework for very quickly creating React Native apps that are served from the cloud.
+
+#### Cross-platform in General
+
+[Flutter](https://flutter.dev/) is a new-ish framework created by Google that I've seen work well on desktop and on mobile.
+
+</AccordionTransformer>
+
+<AccordionTransformer>
+
+### Data Analysis
+
+---
+
+R
+
+Streamlit
+
+</AccordionTransformer>
+
+## Summary
+
+Given that, don't let this list of technologies hold you back! The above is meant to be a survey of the most common ways to accomplish different tasks, not an exhaustive list of interesting bases for projects. You can ignore all of the above and build a GUI in Zig or a command line app in Lisp, as long as it does something interesting and you learn something while doing it. 
+
+
+[Edit this guide on Github :D](https://github.com/toBeOfUse/hackathon-guide)
+
+[Embed this guide on your site :D](https://github.com/toBeOfUse/hackathon-guide?tab=readme-ov-file#embedding-on-your-site)

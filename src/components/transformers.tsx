@@ -19,16 +19,21 @@ const scanForTag = (tag: string) => (c: ReactNode) => reactChildIsTag(c, tag);
 
 /**
  * This component takes some HTML elements, like the ones that the Markdown in
- * MDX files is turned into, and turns them into an accordion. The first header
- * element (h1, h2, h3...) becomes the external label of the accordion. The rest
- * of the children become the content within.
+ * MDX files is turned into, and turns them into an accordion. The content
+ * before the first hr (`---` in markdown) becomes the external label of the
+ * accordion. The rest of the children become the content within.
  */
 export function AccordionTransformer({ children }: { children: ReactNode }) {
   const childArray = Children.toArray(children);
-  const header = childArray.find(scanForTag("h3"));
-  const normalChildren = childArray.filter((c) => c != header);
+  const hrLocation = childArray.findIndex(scanForTag("hr"));
+  const header = childArray.slice(0, hrLocation);
+  const normalChildren = childArray.slice(hrLocation + 1);
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full border border-gray-200 px-4 rounded my-4"
+    >
       <AccordionItem value="item-1">
         <AccordionTrigger>{header}</AccordionTrigger>
         <AccordionContent>{normalChildren}</AccordionContent>
@@ -46,7 +51,7 @@ export function PopoverTransformer({ children }: { children: ReactNode }) {
   const normalChildren = childArray.filter((c) => c != header);
 
   return (
-    <div className="mt-4">
+    <div className="mt-8 flex justify-center">
       <Popover>
         <PopoverTrigger asChild>
           <Button className="cursor-pointer" variant="secondary">
@@ -70,9 +75,9 @@ import {
 
 /**
  * This component takes some HTML elements, like the ones that the Markdown in
- * MDX files is turned into, and turns them into a carousel. Each header becomes
- * the start of a new card within the carousel. Content after the header is
- * inserted into that card until the next header is found, creating a new card.
+ * MDX files is turned into, and turns them into a carousel. Each <h3> becomes
+ * the heading of a new card within the carousel. Content after the header is
+ * inserted into that card until the next <h3> is found, creating a new card.
  */
 export function CarouselTransformer({ children }: { children: ReactNode }) {
   const childArray = Children.toArray(children);
