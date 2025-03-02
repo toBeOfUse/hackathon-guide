@@ -128,3 +128,7 @@
     font-size: 0.9em;
   }
 }
+
+html {
+  scrollbar-width: thin;
+}

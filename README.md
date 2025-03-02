@@ -12,6 +12,62 @@ Credit to [@coji's mdx-vite-example](https://github.com/coji/mdx-vite-example) f
 
 ## Embedding on your site
 
+Just insert this into your site:
+
 ```html
-<iframe></iframe>
+<iframe
+  src="https://tobeofuse.github.io/hackathon-guide/"
+  frameborder="0"
+  style="
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto;
+  "
+></iframe>
 ```
+
+Customize the CSS to fit your needs.
+
+If you're comfortable with a little bit more (simple, vanilla) JavaScript, you could show and hide the guide iframe like this:
+
+```html
+<script>
+  function toggleHackathonGuide(event) {
+    const guide = document.getElementById("hackathon-guide");
+    if (guide.style.height === "0px") {
+      guide.style.height = "600px";
+    } else {
+      guide.style.height = "0px";
+    }
+  }
+</script>
+<div
+  style="
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 5px;
+      "
+>
+  <button
+    style="font-family: sans-serif; cursor: pointer; display: block; margin: 15px auto 0"
+    onclick="toggleHackathonGuide(event)"
+  >
+    Open Hackathon Guide
+  </button>
+  <iframe
+    src="https://tobeofuse.github.io/hackathon-guide/"
+    id="hackathon-guide"
+    frameborder="0"
+    style="width: 100%; height: 0px; transition: height 0.5s ease-out"
+  ></iframe>
+</div>
+```
+
+^ This works out-of-the-box, but you're even more likely to want to style this one differently to match your site.

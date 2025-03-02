@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      function toggleHackathonGuide(event) {
+        const guide = document.getElementById("hackathon-guide");
+        if (guide.style.height === "0px") {
+          guide.style.height = "600px";
+        } else {
+          guide.style.height = "0px";
+        }
+      }
+    </script>
+    <div
+      style="
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 5px;
+      "
+    >
+      <button
+        style="font-family: sans-serif; cursor: pointer; display: block; margin: 15px auto 0"
+        onclick="toggleHackathonGuide(event)"
+      >
+        Open Hackathon Guide
+      </button>
+      <iframe
+        src="https://tobeofuse.github.io/hackathon-guide/"
+        id="hackathon-guide"
+        frameborder="0"
+        style="width: 100%; height: 0px; transition: height 0.5s ease-out"
+      ></iframe>
+    </div>
+  </body>
+</html>
