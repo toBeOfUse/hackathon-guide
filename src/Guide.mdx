@@ -35,7 +35,7 @@ This is a simple enhancement to an age-old pastime that shows how technology can
 
 This was a Python program that read PDFs and, with the help of a language model, created PowerPoint slides that summarized their contents.
 
-These days, everyone knows AI can do this kind of thing, but back in October 2022, before ChatGPT, this *blew people's minds*. This project found an application of technology that people weren't used to yet. 
+These days, everyone knows AI can do this kind of thing, but back in October 2022, before ChatGPT was publicly released, this *blew people's minds*. This project found an application of technology that people weren't aware of yet, and took advantage of it to make something that was, at the time, almost brand new.
 
 <PopoverTransformer>
 
@@ -52,16 +52,16 @@ These days, everyone knows AI can do this kind of thing, but back in October 202
 
 ##### KHE 2022
 
-This was a project created by someone who once broke their arm and wasn't able to type with one of their hands. To improve this kind of situation for everyone, they decided to try to implement an old idea for a dynamic one-handed keyboard layout they found.
+This project arose from a situation in which someone's arm was broken, and they were looking for solutions online to help them type with one hand. There were surprisingly few options available, and the most intriguing idea didn't have a publicly available implementation. The final result of the project was a version of an old key-switching mechanism that you could try out in your browser or download for use on your Windows computer, and it made one-handed typing a completely practical thing.
 
-This project wasn't completely original, but it did iterate on a forgotten concept that then only existed in old Linux config files. Sometimes you just need someone to actually make the thing.
+This project wasn't completely original, but it did iterate on a forgotten concept that filled an actual need and only existed in an old blog post. Sometimes you just need someone to actually make the thing.
 
 <PopoverTransformer>
 
 ##### Technologies Used
 
 - `keyboard`, a Python library that can detect and modify keyboard input
-- PyQt, a Python library used to display stuff in a window
+- PyQt, a Python GUI library used to display a keyboard graphic in a window
 - Vue and Nuxt to create the website that demoed the project
 
 </PopoverTransformer>
@@ -166,7 +166,7 @@ import {
 
 ### Web Development
 
-This is the most common way to create apps, with a server application taking care of computation and data storage and familiar UI manifesting in a browser. 
+This is currently the most common way to create apps, with a server application taking care of computation and data storage whilst familiar UI materializes in a browser. 
 
 ---
 
@@ -174,7 +174,7 @@ This is the most common way to create apps, with a server application taking car
 
 <img alt="A retro graphic of a rotating globe." src="www.gif" width="114" height="106" class="mx-auto max-w-full" />
 
-The web technologies that were originally developed for the creation of Geocities pages and mailing list address forms eventually broke containment and infiltrated every single facet of the modern graphical user interface-based world.
+The web technologies that were originally developed for the creation of Geocities pages and mailing list address forms eventually broke containment and infiltrated every single facet of the modern world.
 
 Generally, to use them, you need to create a **backend server application** that can store data, make itself available on a network, and usually do most of the actual work that the thing you're making needs to do. When a web browser (aka a **client**) connects to it, the backend server will send **client-side code** to the browser that will tell the browser what to display to the user. The server application is known as the **backend**; the client-side code is called the **frontend**.
 
@@ -184,21 +184,23 @@ Except,
 
 The languages that the browser understands are HTML (for content), CSS (for styling and layout), and JavaScript (for interactivity.) Frontend code, which runs in the browser, needs to be written in or compiled to those languages. (By "compiled to," I mean that you might use e.g. TypeScript instead of JavaScript, but then you're going to need a *build step* in your workflow that turns your code *into* JavaScript.)
 
-You can, in fact, write tons of different apps in pure client-side code. These are apps that don't need to use data that exist outside of one person's browser. Cool projects like [the Unsure Calculator](https://filiph.github.io/unsure/) or even the [HexEd.it Hex Editor](https://hexed.it/) work entirely in frontend code in JavaScript. You can even still import libraries published to [npm](https://www.npmjs.com/) from a CDN like [https://esm.sh/](https://esm.sh/).
+You can, in fact, write tons of different apps in pure client-side code. These are apps that don't need to use any data that exists outside of one person's browser. Cool projects like [the Unsure Calculator](https://filiph.github.io/unsure/) or even the [HexEd.it Hex Editor](https://hexed.it/) work entirely in frontend code in JavaScript. You can even still import libraries published to [npm](https://www.npmjs.com/) from a CDN like [https://esm.sh/](https://esm.sh/).
+
+<small className="block mt-3">(Note for pedants: Browsers also understand WebAssembly, and you technically always need a backend in that you need something to send the HTML, CSS, JSS, and, yes, WASM files to the browser, but, you get the idea.)</small>
 
 This is a less popular option these days, though, since a lot of people use tools like TypeScript or React that need that aforementioned *build step* before their code can run in a browser, and that *build step* has to run in some kind of server-side environment, since it definitionally can't run in the browser itself.
 
 #### You might!
 
-Furthermore, you definitely do need a backend if you need to coordinate and share data between multiple browsers, like a social media site or a chat app where posts/messages that are shared by one person need to be viewable by other people.
+Furthermore, you definitely do need a backend if you need to coordinate and share data between multiple browsers, like a social media site or a chat app where posts/messages that are created by one person need to be viewable by other people.
 
 The simplest way to get a backend is to use a site like [val.town](https://www.val.town/) for quick, easy hosting. val.town lets you write a JavaScript function that has access to some simple external storage mechanisms, and runs it in the cloud like magic whenever a user visits its URL.
 
-On the other hand, if you want to run the server application on your own computer, and you're willing to write it in JavaScript, the simplest way is to probably write it using the [Express.js](https://expressjs.com/) framework, running the resulting code by feeding it into Node.js. Or, since backend code doesn't need to run in the browser and can thus be written in any language, you can use the venerable framework [Flask](https://flask.palletsprojects.com/en/stable/), which will help you write a server application in Python.
+On the other hand, if you want to run the server application on your own computer, and you're willing to write it in JavaScript, the simplest way is to probably write it using the [Express.js](https://expressjs.com/) framework, running the resulting code by feeding it into Node.js. Or, since backend code doesn't need to run in the browser, and thus can be written in any language, you can use the venerable framework [Flask](https://flask.palletsprojects.com/en/stable/), which will help you write a server application in Python.
 
 #### Why not both?
 
-There are also "full-stack" web development frameworks that manage both the backend server-side stuff and the fancy frontend interface stuff simultaneously. The most popular of those is probably currently [Next.js](https://nextjs.org/), which lets you write JavaScript that runs on the server and JavaScript that runs in the browser and kind of intermix them freely. This is very powerful, but it can also be extremely confusing when you can't figure out where the code you've written is even running. Other full-stack frameworks include [Nuxt](https://nuxt.com/) and [Remix](https://remix.run/).
+There are also "full-stack" web development frameworks that manage both the backend server-side stuff and the fancy frontend interface stuff simultaneously. The most popular of those is probably currently [Next.js](https://nextjs.org/), which lets you write JavaScript that runs on the server and JavaScript that runs in the browser and kind of intermix them freely. This is very powerful, but it can also be extremely confusing when you can't figure out where the code you've written is even running. Also, note that Next.js requires you to learn [React](https://react.dev/) for the frontend part. Other full-stack frameworks include [Nuxt](https://nuxt.com/) and [Remix](https://remix.run/).
 
 #### Note
 
@@ -226,14 +228,14 @@ Here are a few ways to [delve](https://www.businessinsider.com/y-combinator-paul
 
 ### Using existing tools via APIs
 
-- As covered in the section above, APIs let you request data from other people's computers and use it in your own endeavors. The [OpenAI API](https://platform.openai.com/docs/introduction), which you can use to get freshly generated text or images or transcribed audio or various other things, is the basis of tons of products and projects. However, as such, it's not free.
+- As covered in the other section, APIs let you request data from other people's computers and use it in your own endeavors. The [OpenAI API](https://platform.openai.com/docs/introduction), which you can use to get freshly generated text or images or transcribed audio or various other things, is the basis of tons of products and projects. However, as such, it's not free.
   - If you haven't opened an OpenAI account before, you are granted $5 of free credit for signing up, which expires after three months; $5 doesn't sound like a lot, but if you look at [OpenAI's pricing](https://openai.com/pricing), it can go a fairly long way.
-- Google offers a lot more free credit for its [AI tools](https://cloud.google.com/use-cases/free-ai-tools), including [Gemini](https://ai.google.dev/pricing), its large language model. You can use Gemini 1.0 Pro for free at a maximum rate of 15 requests per minute - that won't let you deploy a product to hundreds of thousands of users, but it can be useful for a hackathon project here and there.
-- Cohere, which has recently released a new large language model called Command R+ that has climbed the ranks on the Chatbot Arena Leaderboard, also [offers free trial access to their API](https://cohere.com/pricing).
+- Google offers a lot more free credit for its [AI tools](https://ai.google.dev/gemini-api/docs/pricing), including [Gemini](https://ai.google.dev/pricing), its large language model. You can use Gemini 2.0 Flash for free at a maximum rate of [15 requests per minute](https://ai.google.dev/gemini-api/docs/rate-limits#current-rate-limits) - that won't let you deploy a product to hundreds of thousands of users, but it can be useful for a hackathon project here and there.
+- Cohere, which has recently released a few large language models in the Command R family that have performed decently in the Chatbot Arena Leaderboard, also offers free access to their API through a trial API key, although again, [there are rate limits](https://docs.cohere.com/v2/docs/rate-limits).
 
 ### Using existing tools through libraries
 
-- There are also many options for those ambitious enough to want to install a mechanical soul into their own actual computer. [llama.cpp](https://github.com/ggerganov/llama.cpp) is a library that lets you run a variety of large language models locally for text completion and chat, although you'll be expected to have pretty decent specs to run the high-end ones.
+- There are also many options for those ambitious enough to want to install a mechanical soul into their own actual computer. [ollama](https://ollama.com/) is a program that lets you run a variety of large language models locally for text completion and chat, including [via Python](https://github.com/ollama/ollama-python), although you'll be expected to have pretty decent specs to run the high-end ones.
 - [Hugging Face](https://huggingface.co) provides a vast array of models for different use cases that involve handling text, images, and audio, most of which can be downloaded and utilized in a few lines of code using their [transformers](https://github.com/huggingface/transformers) Python library. Again, you might have to be a little bit patient to get results on an ordinary computer, but it is more exciting to see things like speech recognition happen right there in front of you.
 - Also, there exist higher-level libraries that can make use of local and non-local machine learning models, like [LangChain](https://www.ibm.com/topics/langchain), which is a popular framework for building applications around large language models using techniques like retrieval-augmented generation (RAG), where the AI is given the ability to skim through text that you provide to identify relevant information and answer your questions. (Basically.)
 
@@ -258,13 +260,11 @@ What is an API? What isn't an API? Is Santa Claus my parents?
 
 <p className='text-center mb-6'>**For Inspiration**: [This curated list of public APIs](https://github.com/public-api-lists/public-api-lists)</p>
 
-API stands for Application Programming Interface and it is a very broad term that can refer to any agreed-upon system for enabling two computer programs or libraries to interact in a constructive way.
+API stands for Application Programming Interface and it is a very broad term that can refer to any agreed-upon system for enabling two or more chunks of code to interact in a constructive way.
 
-A lot of the time, though, an API is going to turn out to be a service that provides structured data over the Internet. A classic example is the OpenWeather API. You can create an API call, and your program will get back data in some specified format like JSON or XML that informs it what the weather is, was, or is predicted to be in a certain area. It will handle a certain amount of requests for free, and then expect you to pay up for more. You can create a program that uses that data to do things like critique picnicking schedules.
+A lot of the time, though, an API is going to turn out to be a service that provides structured data over the Internet. A classic example is the OpenWeather API. You can send it a request for information, and your program will get back data in some specified format like JSON or XML that informs it what the weather is, was, or is predicted to be in a certain area. It will handle a certain amount of requests for free, and then expect you to pay up for more. You can create a program that uses that data to do things like critique picnicking schedules.
 
-This is essentially a backend web server (see the section above) that responds to network requests with raw data, instead of with client-side code that creates a graphical user interface. It is often useful to use an API to interact with fancy tools that you can't build yourself, like large language models (see the section below.)
-
-Often, libraries exist that provide pre-programmed ways to request data from any given API, like this Python library that lets you get weather data with simple function calls. Keep an eye out for libraries like this, because they can be helpful. 
+There are generic, universal libraries for making API requests over the Internet like Python's [requests](https://pypi.org/project/requests/) library or JavaScript's [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) function. (Confusingly, `fetch` itself is referred to as an API, just because it's a way for your code to interact with the code that someone else wrote that actually sends a request over the Internet. It's APIs all the way down.) But often, libraries exist that provide pre-programmed ways to request data from any given API, like [this Python library](https://github.com/csparpa/pyowm) that lets you get weather data with simple function calls, or the OpenAI [Python](https://github.com/openai/openai-python) and [JavaScript](https://github.com/openai/openai-node) libraries that give you an easy way to pull information from the OpenAI API. Keep an eye out for libraries like this, because they can be helpful. 
 
 </AccordionTransformer>
 
@@ -276,7 +276,7 @@ Creating simple and useful programs that one can install on one's phone or compu
 
 ---
 
-Native, installable apps can benefit in speed, look, and feel from being built to run on a specific kind of device. There are usually relatively straightforward recommended ways to build apps for a specific platform; there aren't a huge number of different ideas for how to deploy things crowding into the field. How you create your app depends largely on where you want it to run, so let's go through the possibilities:
+Installable apps that are built for a specific operating system and type of device can benefit in speed, look, and feel compared to web apps. There are usually relatively straightforward recommended ways to build apps for a specific platform, set forth by the by the platforms' creators. How you create your app depends largely on where you want it to run, so let's go through the possibilities:
 
 #### Windows
 
@@ -316,16 +316,16 @@ What does data know? Does it know things? Let's find out!
 
 <p className='text-center my-6'>**For Inspiration**: [Kaggle's Featured Datasets](https://www.kaggle.com/datasets)</p>
 
-Data analysis projects rest more on the analysis part than the specific technical implementation; it's less framework-dependent than apps are. Nevertheless, there are some important tools that you should know that you can use as part of your project:
+Data analysis projects lean more on the analysis part than the specific technical implementation; it's less framework-dependent than apps are. Nevertheless, there are some important tools that you should know that you can use as part of your project:
 
 - [Kaggle](https://www.kaggle.com/) is a site with a very simple and important purpose: it hosts vast datasets that people can do data analysis on.
 - [R](https://www.r-project.org/) is a programming language that's built for doing statistical operations over large sets of data. It's very different than most programming languages; it's truly data-oriented, and doesn't have much of the if-then procedural logic that most coders are used to. Once you have R, you can install [RStudio](https://posit.co/download/rstudio-desktop/), which is a specialized IDE that makes it easier to run programs and deal with R's input and output, and gives you the [R Markdown](https://rmarkdown.rstudio.com/) file format that lets you present your data analysis findings more beautifully.
-- Python is also a programming language. Unlike R, it's a multi-paradigm language with procedural, functional, and object-oriented features, and has a wide general-purpose appeal. It also has a whole family of tools that are commonly used with each other for data analysis:
+- Python is also a programming language. Unlike R, it's a multi-paradigm language with procedural, functional, and object-oriented features, and has a wide general-purpose appeal. But it also has a whole family of tools that are commonly used with each other for data analysis:
   - [Matplotlib](https://matplotlib.org/) is an extremely common way to make graphs and charts.
   - [Pandas](https://pandas.pydata.org/) is a library that lets you manipulate "data frames" (basically, tables) with highly efficient syntax in a suspiciously R-like way.
   - [Numpy](https://numpy.org/) is a library that's used to do bulk operations on numbers more quickly and efficiently than normal Python code does.
-  - ✨Notebooks✨ are really the star of the show here. Originating with [Jupyter Notebooks](https://jupyter.org/), the Python community has conspired to create a format where you alternate cells of Markdown text and Python code in order to present the data analysis that comes out of your Python in an organized way. The charts that Matplotlib makes and the data frames that you create with Pandas can be smoothly displayed in notebook cells, along with tons of other things. There are a number of implementations of the basic notebook idea out there now, from [JupyterLab](https://jupyter.org/try) to [Google Colab](https://colab.research.google.com/) to [Kaggle Code](https://www.kaggle.com/code).
-- Streamlit is a Python framework that's important enough for me to give it a top-level bullet point of its own. Streamlit is built to ingest data and turn it into a reader-friendly dashboard; you write Python program that creates charts, graphs, descriptions, and controls, and Streamlit streams the content to a web browser to view and interact with it.
+  - ✨Notebooks✨ are really the star of the show here. Originating with [Jupyter Notebooks](https://jupyter.org/), the Python community has conspired to create a format where you write out "cells" of Markdown text and Python code in order to present the data analysis that comes out of your Python in an organized way. The charts that Matplotlib makes and the data frames that you create with Pandas can be smoothly displayed in notebook cells, along with tons of other things. There are a number of implementations of the basic notebook idea out there now, from [JupyterLab](https://jupyter.org/try) to [Google Colab](https://colab.research.google.com/) to [Kaggle Code](https://www.kaggle.com/code).
+- [Streamlit](https://streamlit.io/) is a Python framework that's important enough for me to give it a top-level bullet point of its own. Streamlit is built to ingest data and turn it into a reader-friendly dashboard; you write Python program that creates charts, graphs, descriptions, and controls, and Streamlit streams the content to a web browser to view and interact with it.
 - [Observable Notebooks](https://observablehq.com/platform/notebooks) are JavaScript's answer to Jupyter notebooks - you create notebooks that consist of a series of cells that, unlike in Jupyter notebooks, "observe" each other, sharing data and updating based on each other's values, letting you create live views of data that also tap into the powerful [d3.js](https://d3js.org/) library for data visualization.
 
 </AccordionTransformer>
