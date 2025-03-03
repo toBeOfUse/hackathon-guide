@@ -32,10 +32,10 @@ export function AccordionTransformer({ children }: { children: ReactNode }) {
     <Accordion
       type="single"
       collapsible
-      className="w-full border border-gray-200 px-4 rounded my-4"
+      className="w-full border border-gray-200 px-4 rounded-lg my-4"
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger>{header}</AccordionTrigger>
+        <AccordionTrigger className="text-sm">{header}</AccordionTrigger>
         <AccordionContent>{normalChildren}</AccordionContent>
       </AccordionItem>
     </Accordion>
@@ -51,7 +51,7 @@ export function PopoverTransformer({ children }: { children: ReactNode }) {
   const normalChildren = childArray.filter((c) => c != header);
 
   return (
-    <div className="mt-8 flex justify-center">
+    <div className="mt-6 flex justify-center">
       <Popover>
         <PopoverTrigger asChild>
           <Button className="cursor-pointer" variant="secondary">
