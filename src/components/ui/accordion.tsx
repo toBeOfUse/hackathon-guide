@@ -32,7 +32,7 @@ function AccordionTrigger({
         data-slot="accordion-trigger"
         className={cn(
           "cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1",
-          "items-center justify-between gap-4 pb-4 text-left text-md font-medium",
+          "items-center justify-between gap-4 pb-4 text-left text-md",
           "transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none",
           "disabled:opacity-50 [&[data-state=open]>svg]:rotate-180",
           className

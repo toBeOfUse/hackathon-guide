@@ -51,7 +51,7 @@ export function PopoverTransformer({ children }: { children: ReactNode }) {
   const normalChildren = childArray.filter((c) => c != header);
 
   return (
-    <div className="mt-6 flex justify-center">
+    <div className="pt-6 flex justify-center">
       <Popover>
         <PopoverTrigger asChild>
           <Button className="cursor-pointer" variant="secondary">
@@ -98,17 +98,15 @@ export function CarouselTransformer({ children }: { children: ReactNode }) {
 
   return (
     <Carousel className="w-full sm:max-w-md md:max-w-lg mx-auto">
-      <CarouselContent>
+      <CarouselContent className="h-full">
         {cards.map(({ header, content }, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1 h-full">
-              <Card className="h-full">
-                <CardContent className="flex flex-col aspect-square items-center justify-center p-6 h-full">
-                  {header}
-                  {content}
-                </CardContent>
-              </Card>
-            </div>
+          <CarouselItem key={index} className="h-auto">
+            <Card className="h-full">
+              <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
+                {header}
+                {content}
+              </CardContent>
+            </Card>
           </CarouselItem>
         ))}
       </CarouselContent>
