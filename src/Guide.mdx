@@ -4,7 +4,7 @@ Throwing together a *revolutionary* technical project that **shakes the world to
 
 All you need is an idea and the tools to implement it. For example: 
 
-## Projects From The Past <span className="md:hidden text-base block">(Swipe for more)</span>
+## Example Projects <span className="md:hidden text-base block">(Swipe for more)</span>
 
 import { CarouselTransformer, PopoverTransformer } from '@/components/transformers.tsx';
 
@@ -66,7 +66,11 @@ This project wasn't completely original, but it did iterate on a forgotten conce
 
 </PopoverTransformer>
 
-{/* ### [FaunaFinder](https://devpost.com/software/faunafinder-ai-powered-animal-breed-recognition)
+{/*
+
+these examples are kind of lame:
+
+### [FaunaFinder](https://devpost.com/software/faunafinder-ai-powered-animal-breed-recognition)
 
 ##### MakeUC 2023
 
@@ -82,9 +86,9 @@ There is still a lot of untapped potential within the world of AI, probably, and
 - Google Cloud Vision to recognize animals with AI
 - APIs for Wikipedia and animal databases
 
-</PopoverTransformer> */}
+</PopoverTransformer>
 
-{/* ### [Subway Cheese Chase](https://devpost.com/software/subway-cheese-chase)
+### [Subway Cheese Chase](https://devpost.com/software/subway-cheese-chase)
 
 ##### MakeUC 2023
 
@@ -99,7 +103,9 @@ Not every hackathon project has to be super serious!
 - Godot, a popular free game engine
 - Blender, a program for creating 3D art
 
-</PopoverTransformer> */}
+</PopoverTransformer>
+
+*/}
 
 ### [CWRU Full-Text Class Search](https://devpost.com/software/cwru-full-text-class-search)
 
@@ -107,7 +113,7 @@ Not every hackathon project has to be super serious!
 
 This was a project developed by students from Case Western Reserve University who disapproved of their university's portal for class searches. So, they scraped the content of the portal and made their own website out of it.
 
-This project *identified a way in which the world sucks* and took it upon itself to try to *fix* it.
+This project *identified a way in which the human experience sucks* and took it upon itself to *fix* it.
 
 <PopoverTransformer>
 
@@ -143,10 +149,10 @@ For even more projects, browse [the global project gallery on Devpost](https://d
 
 ### Key takeaways for success:
 
-- Keep the scope of your project narrow - if you have an idea, try to just implement the core of it.
-- **Put a little hot sauce on that bad boy.**
-- Use libraries written in your chosen language that solve hard problems.
 - Use a high-level framework that takes care of the routine details of the kind of project you're working on. 
+- **Put a little hot sauce on that bad boy.**
+- As with all creative work, seeking inspiration from outside sources is underrated.
+- Keep the scope of your project narrow - if you have an idea, try to just implement the core of it.
 
 For more on those last two points, read on:
 
@@ -176,9 +182,9 @@ Except,
 
 #### Do you need a backend?
 
-The languages that the browser understands are HTML (for content), CSS (for styling and layout), and JavaScript (for interactivity.) Frontend code, which runs in the browser, needs to be written in or compiled to those languages. (By "compiled to," I mean that you might use e.g. Typescript instead of JavaScript, but then you're going to need a *build step* in your workflow that turns your code *into* JavaScript.)
+The languages that the browser understands are HTML (for content), CSS (for styling and layout), and JavaScript (for interactivity.) Frontend code, which runs in the browser, needs to be written in or compiled to those languages. (By "compiled to," I mean that you might use e.g. TypeScript instead of JavaScript, but then you're going to need a *build step* in your workflow that turns your code *into* JavaScript.)
 
-You can, in fact, write tons of different apps in pure client-side code. These are apps that don't need to use data that exist outside of one person's browser. Cool projects like [the Unsure Calculator](https://filiph.github.io/unsure/) or even the [HexEd.it Hex Editor](https://hexed.it/) work entirely in frontend code in JavaScript. You can even import libraries hosted on [npm](https://www.npmjs.com/) from a CDN like [https://esm.sh/](https://esm.sh/).
+You can, in fact, write tons of different apps in pure client-side code. These are apps that don't need to use data that exist outside of one person's browser. Cool projects like [the Unsure Calculator](https://filiph.github.io/unsure/) or even the [HexEd.it Hex Editor](https://hexed.it/) work entirely in frontend code in JavaScript. You can even still import libraries published to [npm](https://www.npmjs.com/) from a CDN like [https://esm.sh/](https://esm.sh/).
 
 This is a less popular option these days, though, since a lot of people use tools like TypeScript or React that need that aforementioned *build step* before their code can run in a browser, and that *build step* has to run in some kind of server-side environment, since it definitionally can't run in the browser itself.
 
@@ -188,11 +194,11 @@ Furthermore, you definitely do need a backend if you need to coordinate and shar
 
 The simplest way to get a backend is to use a site like [val.town](https://www.val.town/) for quick, easy hosting. val.town lets you write a JavaScript function that has access to some simple external storage mechanisms, and runs it in the cloud like magic whenever a user visits its URL.
 
-On the other hand, if you want to run the server application on your own computer, and you're willing to write it in JavaScript, the simplest way is to probably write it using the [Express.js] framework, running the resulting code by feeding it into Node.js. Or, since backend code doesn't need to run in the browser and can thus be written in any language, you can use the venerable framework Flask, which will help you write a server application in Python.
+On the other hand, if you want to run the server application on your own computer, and you're willing to write it in JavaScript, the simplest way is to probably write it using the [Express.js](https://expressjs.com/) framework, running the resulting code by feeding it into Node.js. Or, since backend code doesn't need to run in the browser and can thus be written in any language, you can use the venerable framework [Flask](https://flask.palletsprojects.com/en/stable/), which will help you write a server application in Python.
 
 #### Why not both?
 
-There are also "full-stack" web development frameworks that manage both the backend server-side stuff and the fancy frontend interface stuff simultaneously. The most popular of those is probably currently Next.js, which lets you write JavaScript that runs on the server and JavaScript that runs in the browser and kind of intermix them freely. This is very powerful, but it can also be extremely confusing when you can't figure out where the code you've written is even running. Other full-stack frameworks include Nuxt and Remix.
+There are also "full-stack" web development frameworks that manage both the backend server-side stuff and the fancy frontend interface stuff simultaneously. The most popular of those is probably currently [Next.js](https://nextjs.org/), which lets you write JavaScript that runs on the server and JavaScript that runs in the browser and kind of intermix them freely. This is very powerful, but it can also be extremely confusing when you can't figure out where the code you've written is even running. Other full-stack frameworks include [Nuxt](https://nuxt.com/) and [Remix](https://remix.run/).
 
 #### Note
 
@@ -204,7 +210,7 @@ There are also "full-stack" web development frameworks that manage both the back
 
 ### Artificial Intelligence
 
-This term typically refers to technology that can make sense out of the ambiguities involved in natural phenomenona like language or images in a probabilistic way.
+This term typically refers to technology that can make sense out of the ambiguities involved in natural phenomena like language or images in a probabilistic way.
 
 ---
 
@@ -213,6 +219,8 @@ This term typically refers to technology that can make sense out of the ambiguit
 <img alt="A robot breakdancing, with the caption 'I was built to the destroy but right now I'm busy'" src="ai.jpg" class="mx-auto max-w-full" width="600" height="372" />
 
 Artificial intelligence is a highly technical field replete with functions with weird names like softmax and sigmoid and the promise that it'll replace us all (humans) any minute now, but the basic ideas are actually pretty approachable, and there are a lot of tools out there right now that package up the last few decades of the field's progress so you don't have to redo it.
+
+{/* TODO: list of things that you can do with AI: chatbot, chained chatbots, content generation, agents, embeddings,  */}
 
 Here are a few ways to [delve](https://www.businessinsider.com/y-combinator-paul-graham-delve-ai-chatgpt-giveaway-email-pitch-2024-4) into this fertile territory, from least to most hands-on:
 
@@ -237,7 +245,6 @@ Although getting new machine learning models working takes quite a bit of ambiti
 - [PyTorch](https://github.com/pytorch/pytorch) is used more by academics and is also perfectly capable of being used to create a bird recognizer. Although it seems to me like a lot of generalist usage of these libraries is centered around recognizing pictures of things, [here](https://www.youtube.com/watch?v=kCc8FmEb1nY) is a YouTube video where a former OpenAI engineer uses PyTorch to build a GPT-style LLM, which is something.
 
 Note that [Google Colab](https://colab.research.google.com/) and [Kaggle](https://www.kaggle.com/) both provide [Jupyter Notebook](https://jupyter.org/)–based Python environments that are commonly used to test out AI projects.
-
 
 </AccordionTransformer>
 
@@ -273,7 +280,7 @@ Native, installable apps can benefit in speed, look, and feel from being built t
 
 #### Windows
 
-Windows app, otherwise known as normal computer programs, are a thing, because a lot of people use Windows computers. If you want to create an app for Windows, you should probably use the Windows Presentation Foundation (WPF) framework. It lets you create apps using XAML, which is like HTML but for Windows, and C#. The simplest way to use WPF is to create a new project with it in [Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/).
+Windows apps, otherwise known as like, normal computer programs, are a thing, because a lot of people use Windows computers. If you want to create an app for Windows, you should probably use the Windows Presentation Foundation (WPF) framework. It lets you create apps using XAML, which is like HTML but for Windows, and C#. The simplest way to use WPF is to create a new project with it in [Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 #### MacOS/iOS
 
@@ -281,11 +288,11 @@ Apple's devices currently use the [SwiftUI](https://developer.apple.com/xcode/sw
 
 #### Android
 
-Android apps are currently usually built in [Android Studio](https://developer.android.com/studio) using a new-ish programming language called Kotlin.
+Android apps are currently usually built in [Android Studio](https://developer.android.com/studio) using a new-ish programming language called Kotlin. (Android apps used to be written in Java, but Kotlin is the officially ordained Java-compatible successor.)
 
 #### Cross-Platform for Desktop
 
-[Qt](https://www.qt.io/) is a C++ library that is mostly used to make desktop apps for MacOS, Linux, and Windows by projects ranging from Maya to VLC Player. It also has a Python version.
+[Qt](https://www.qt.io/) is a C++ library that is mostly used to make desktop apps for MacOS, Linux, and Windows by projects ranging from Maya to VLC Player. It also has a Python bindings. It's an older framework, so expect a little bit of friction while figuring its object-oriented approach out.
 
 #### Cross-Platform for Mobile
 
@@ -293,7 +300,7 @@ Guess what, [React Native](https://reactnative.dev/) is a popular way to create 
 
 #### Cross-platform in General
 
-[Flutter](https://flutter.dev/) is a new-ish framework created by Google that I've seen work well on desktop and on mobile.
+[Flutter](https://flutter.dev/) is a new-ish framework created by Google that I've seen work well on desktop and on mobile. It has the advantage of being one of the only popular cross-platform frameworks that doesn't rely on JavaScript; this gives it better performance and, a lot of the time, more native-feeling UI.
 
 </AccordionTransformer>
 
@@ -301,21 +308,31 @@ Guess what, [React Native](https://reactnative.dev/) is a popular way to create 
 
 ### Data Analysis
 
+What does data know? Does it know things? Let's find out!
+
 ---
 
-<p className='text-center mb-6'>**For Inspiration**: [Kaggle's Featured Datasets](https://www.kaggle.com/datasets)</p>
+<img alt="A screenshot of a very old version of Microsoft Excel, showing a generic spreadsheet called 'Working Capital Management.' Clippy is there." src="data.png" width="640" height="480" class="mx-auto max-w-md" />
 
-R
+<p className='text-center my-6'>**For Inspiration**: [Kaggle's Featured Datasets](https://www.kaggle.com/datasets)</p>
 
-Streamlit
+Data analysis projects rest more on the analysis part than the specific technical implementation; it's less framework-dependent than apps are. Nevertheless, there are some important tools that you should know that you can use as part of your project:
 
-Tableau
-
-Power BI
+- [Kaggle](https://www.kaggle.com/) is a site with a very simple and important purpose: it hosts vast datasets that people can do data analysis on.
+- [R](https://www.r-project.org/) is a programming language that's built for doing statistical operations over large sets of data. It's very different than most programming languages; it's truly data-oriented, and doesn't have much of the if-then procedural logic that most coders are used to. Once you have R, you can install [RStudio](https://posit.co/download/rstudio-desktop/), which is a specialized IDE that makes it easier to run programs and deal with R's input and output, and gives you the [R Markdown](https://rmarkdown.rstudio.com/) file format that lets you present your data analysis findings more beautifully.
+- Python is also a programming language. Unlike R, it's a multi-paradigm language with procedural, functional, and object-oriented features, and has a wide general-purpose appeal. It also has a whole family of tools that are commonly used with each other for data analysis:
+  - [Matplotlib](https://matplotlib.org/) is an extremely common way to make graphs and charts.
+  - [Pandas](https://pandas.pydata.org/) is a library that lets you manipulate "data frames" (basically, tables) with highly efficient syntax in a suspiciously R-like way.
+  - [Numpy](https://numpy.org/) is a library that's used to do bulk operations on numbers more quickly and efficiently than normal Python code does.
+  - ✨Notebooks✨ are really the star of the show here. Originating with [Jupyter Notebooks](https://jupyter.org/), the Python community has conspired to create a format where you alternate cells of Markdown text and Python code in order to present the data analysis that comes out of your Python in an organized way. The charts that Matplotlib makes and the data frames that you create with Pandas can be smoothly displayed in notebook cells, along with tons of other things. There are a number of implementations of the basic notebook idea out there now, from [JupyterLab](https://jupyter.org/try) to [Google Colab](https://colab.research.google.com/) to [Kaggle Code](https://www.kaggle.com/code).
+- Streamlit is a Python framework that's important enough for me to give it a top-level bullet point of its own. Streamlit is built to ingest data and turn it into a reader-friendly dashboard; you write Python program that creates charts, graphs, descriptions, and controls, and Streamlit streams the content to a web browser to view and interact with it.
+- [Observable Notebooks](https://observablehq.com/platform/notebooks) are JavaScript's answer to Jupyter notebooks - you create notebooks that consist of a series of cells that, unlike in Jupyter notebooks, "observe" each other, sharing data and updating based on each other's values, letting you create live views of data that also tap into the powerful [d3.js](https://d3js.org/) library for data visualization.
 
 </AccordionTransformer>
 
-## Summary
+## Conclusion
+
+The most important thing to remember at a hackathon is to **have fun** and **be yourself**. And win. Honestly, the best advice I can give is to go in with a project idea that is specific, interesting, and doable within the given time period. This guide will hopefully help to give you inspiration for that, and ideally help you figure out how you're going to build that.
 
 Given that, don't let this list of technologies hold you back! The above is meant to be a survey of the most common ways to accomplish different tasks, not an exhaustive list of interesting bases for projects. You can ignore all of the above and build a GUI in Zig or a command line app in Lisp, as long as it does something interesting and you learn something while doing it. 
 
